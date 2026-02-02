@@ -1,36 +1,83 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Rick & Morty Characters App
 
-## Getting Started
+Aplicación web desarrollada con **Next.js (App Router)**, **React**, **Redux Toolkit** y **TypeScript**, que consume la **API pública de Rick and Morty** para mostrar personajes, permitir buscarlos y gestionarlos como favoritos, manteniendo persistencia local.
 
-First, run the development server:
+El diseño está basado fielmente en el layout proporcionado en Figma, con enfoque **mobile first** y adaptación precisa a **desktop**.
 
+---
+
+## 🚀 Tecnologías utilizadas
+
+- Next.js 14 (App Router)
+- React + TypeScript
+- Redux Toolkit
+- CSS Modules
+- Jest (pruebas unitarias)
+- API pública: https://rickandmortyapi.com
+
+---
+
+## 📦 Instalación y ejecución del proyecto
+
+### 1. Clonar el repositorio
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+git clone <URL_DEL_REPOSITORIO>
+cd <NOMBRE_DEL_PROYECTO>
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+2 npm install
+3 npm run dev
+4 http://localhost:3000 El proyecto consume directamente la API pública de Rick and Morty, por lo que NO es necesario levantar json-server ni ningún backend adicional.
+5 npm test Actualmente se incluyen pruebas unitarias para: Lógica de favoritos (Redux Slice)
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+Funcionalidades principales
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Listado de personajes desde la API oficial
 
-## Learn More
+Buscador en tiempo real
 
-To learn more about Next.js, take a look at the following resources:
+Vista tipo grid (mobile y desktop)
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Vista de detalle con slider
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+Sistema de favoritos con Redux
 
-## Deploy on Vercel
+Persistencia de favoritos en localStorage
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+UI fiel al diseño de Figma
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Diseño responsive (mobile → desktop)
+
+¿Qué es lo que más me gustó de mi desarrollo?
+
+Lo que más disfruté fue traducir el diseño de Figma a código de forma precisa, cuidando detalles como colores, estados hover, layout y comportamiento responsive, sin sacrificar la limpieza del código ni la arquitectura.
+
+También fue muy satisfactorio implementar Redux de forma simple pero efectiva, asegurando una experiencia fluida y persistente para el usuario.
+
+¿Qué hubiera mejorado si tuviera más tiempo?
+
+Implementar paginación o infinite scroll
+
+Agregar tests de componentes (React Testing Library)
+
+Mejorar accesibilidad (ARIA labels, navegación con teclado)
+
+Implementar animaciones suaves (Framer Motion)
+
+Optimizar carga de imágenes con next/image
+
+Pain point / bug encontrado y solución
+Problema:
+
+Durante el desarrollo surgieron errores de CORS y fallos de hidratación al intentar consumir un backend local (json-server) junto con componentes client-side en Next.js App Router.
+
+Solución:
+
+Se optó por consumir directamente la API oficial de Rick and Morty, eliminando dependencias innecesarias y evitando conflictos de CORS y SSR/CSR.
+Además, se reorganizó el uso de "use client" y el Provider de Redux para evitar errores de hidratación.
+
+Conclusión
+
+Este proyecto cumple con los requerimientos funcionales y técnicos solicitados, manteniendo buenas prácticas de desarrollo, código limpio y una UI cuidada y consistente.
+
+Gracias por la oportunidad :)
+

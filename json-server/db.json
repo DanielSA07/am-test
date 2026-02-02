@@ -1,0 +1,36 @@
+{
+  "characters": [
+    {
+      "id": 1,
+      "name": "Rick Sanchez",
+      "image": "https://rickandmortyapi.com/api/character/avatar/1.jpeg",
+      "status": "Alive",
+      "species": "Human",
+      "favorite":"false"
+    },
+    {
+      "id": 2,
+      "name": "Morty Smith",
+      "image": "https://rickandmortyapi.com/api/character/avatar/2.jpeg",
+      "status": "Dead",
+      "species": "Human",
+      "favorite":"false"
+    },
+        {
+      "id": 3,
+      "name": "Summer",
+      "image": "https://rickandmortyapi.com/api/character/avatar/3.jpeg",
+      "status": "Alive",
+      "species": "Human",
+      "favorite":"false"
+    },
+    {
+      "id": 4,
+      "name": "Tuberculosis",
+      "image": "https://rickandmortyapi.com/api/character/avatar/4.jpeg",
+      "status": "Dead",
+      "species": "Monster",
+      "favorite":"false"
+    }
+  ]
+}

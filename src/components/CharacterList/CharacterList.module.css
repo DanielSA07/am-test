@@ -1,0 +1,198 @@
+.mainWrapper {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  gap: 25px;
+}
+
+/* ---------- HEADER ---------- */
+.header {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.searchBar {
+  display: flex;
+  align-items: center;
+  border: 1.5px solid #97ce4c;
+  border-radius: 12px;
+  padding: 8px 15px;
+  width: 100%;
+  max-width: 350px;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.searchBar input {
+  flex: 1;
+  background: transparent;
+  border: none;
+  color: #97ce4c;
+  outline: none;
+  padding: 0 10px;
+}
+
+.searchIcon img,
+.userIcon img {
+  width: 18px;
+  height: 18px;
+}
+
+/* ---------- GRID ---------- */
+.gridSection {
+  width: 100%;
+  max-width: 350px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px;
+}
+
+/* ---------- SLIDER ---------- */
+.sliderWrapper {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px 0 100px 0;
+}
+
+/* ---------- FOOTER FAVS MOBILE ---------- */
+.footerFavs {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  max-width: 350px;
+  padding: 15px;
+  z-index: 2000;
+}
+
+.favsToggle {
+  width: 100%;
+  background: #333;
+  color: #fff;
+  border: none;
+  padding: 14px;
+  border-radius: 10px;
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.5);
+}
+
+.dropdown {
+  position: absolute;
+  bottom: 100%;
+  left: 15px;
+  right: 15px;
+  background: #494949;
+  border-radius: 12px 12px 0 0;
+  border: 1px solid #444;
+  margin: 0 auto;
+  overflow: hidden;
+  width: 87%;
+  height: 160px;
+}
+
+.favItem {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 16px;
+  border-bottom: 1px solid #494949;
+  background: #9c9c9c;
+  width: 300px;
+  height: 26px;
+}
+
+.favItem span {
+  color: #fff;
+  font-size: 13px;
+  text-transform: uppercase;
+}
+
+.deleteBtn {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.deleteBtn img {
+  width: 16px;
+  filter: brightness(0) invert(1);
+}
+
+.emptyMsg {
+  color: #888;
+  text-align: center;
+  padding: 15px;
+  font-size: 12px;
+}
+
+/* ======================================================
+   ================= DESKTOP LAYOUT =====================
+   ====================================================== */
+
+@media (min-width: 1024px) {
+  .mainWrapper {
+    display: grid;
+    grid-template-columns: 420px 1fr;
+    grid-template-rows: auto 1fr;
+    gap: 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+    align-items: start;
+  }
+
+  .header {
+    grid-column: 2;
+    justify-content: flex-start;
+  }
+
+  .searchBar {
+    max-width: 420px;
+  }
+
+  .gridSection {
+    grid-column: 2;
+    max-width: none;
+    justify-content: flex-start;
+  }
+
+  .grid {
+    grid-template-columns: repeat(2, 180px);
+    gap: 20px;
+  }
+
+  .sliderWrapper {
+    grid-column: 1;
+    grid-row: 1 / span 2;
+    margin: 0;
+    justify-content: flex-start;
+  }
+
+  /* Footer deja de ser fijo */
+  .footerFavs {
+    position: static;
+    max-width: none;
+    padding: 0;
+  }
+
+  .favsToggle {
+    width: auto;
+    padding: 10px 24px;
+    border-radius: 12px;
+  }
+
+  .dropdown {
+    position: absolute;
+    bottom: auto;
+    top: 100%;
+  }
+}
